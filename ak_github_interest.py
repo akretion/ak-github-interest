@@ -11,7 +11,7 @@ config.read(os.path.expanduser('~/.local/ak_github_interest.ini'))
 LOGIN = config['github']['login']
 PASS = config['github']['password']
 
-to_list = lambda s: [l for l in s.split('\n') if l]
+to_list = lambda s: [l for l in s.splitlines() if l]
 
 MEMBERS_OF = to_list(config['github']['members_of'])
 PR_IN = to_list(config['github']['pull_request_in'])
